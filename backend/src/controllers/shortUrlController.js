@@ -38,6 +38,7 @@ export const createShortUrl = async (req, res) => {
         const newUrl = new ShortURL({
             originalUrl,
             shortCode,
+            title,
             userId,
         });
         await newUrl.save();
